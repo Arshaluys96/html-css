@@ -2057,6 +2057,10 @@
         margin-left: 8px;
     }
 
+    .header{
+        position: fixed
+    }
+
 
 
 }
