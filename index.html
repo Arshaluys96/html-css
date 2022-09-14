@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="content">
-        <div class="header">
+        <div class="header" style="position: fixed">
             <div class="h-circle-logo"></div>
             <div class="logo">Power<b class="dot">.</b></div>
             <div class="menu">
@@ -22,20 +22,39 @@
                 <a class="menus">Services</a>
                 <a class="menus">Products</a>
             </div>
+            <div class="hamburger-menu menu-nav">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="#">Home</a></li>
+                    <li><a class="menu__item" href="#">About US</a></li>
+                    <li><a class="menu__item" href="#">Services</a></li>
+                    <li><a class="menu__item" href="#">Products</a></li>
+                </ul>
+            </div>
         </div>
         <div class="first-content">
             <div class="products">
                 <div class="header-text">
                     <div class="products-header font">
                         We Design Impactful
-                        <div class="digital">
-                            Digital
-                            <div class="header-pr">
-                                <div class="sm-circlee left-cir"></div>
-                                <div class="sm-circlee right-cir"></div>
-                                <div class="sm-circlee fLeft-cir"></div>
-                                <div class="sm-circlee fRight-cit"></div>
-                                Products
+                        <div class="dig">
+                            <div class="digital">
+                                <div>
+                                    Digital
+                                </div>
+                                <div class="header-pr">
+                                    <div class="sm-circlee left-cir"></div>
+                                    <div class="sm-circlee right-cir"></div>
+                                    <div class="sm-circlee fLeft-cir"></div>
+                                    <div class="sm-circlee fRight-cit"></div>
+                                    <div>
+                                        Products
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -95,7 +114,7 @@
             </div>
         </div>
         <div class="crate">
-            <div>
+            <div class="cr-tit">
                 <h2 class="crate-title">We Crate World-Class Digital Product </h2>
                 <p class="crate-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, possimus!</p>
             </div>
@@ -703,19 +722,21 @@
            </div>
         </div>
         <div class="help">
-            <div class="help-left">
-                <div class="l-first">How We Can Help You</div>
-                <div class="l-second">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium beatae corporis dignissimos
-                </div>
-                <div class="l-third">
-                    <div class="mes-icon">
-                        <i class="fa-solid fa-envelope"></i>
+            <div class="left-he">
+                <div class="help-left">
+                    <div class="l-first">How We Can Help You</div>
+                    <div class="l-second">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium beatae corporis dignissimos
                     </div>
-                    <div class="em-text">Enter your email address</div>
-                    <div>
-                        <button class="l-third-btn">Subscribe</button>
+                    <div class="l-third">
+                        <div class="mes-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="em-text">Enter your email address</div>
+                        <div>
+                            <button class="l-third-btn">Subscribe</button>
+                        </div>
                     </div>
                 </div>
             </div>

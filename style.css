@@ -1,6 +1,11 @@
 @import "helpers.css";
+
+.menu-nav{
+   display: none;
+}
+
 .content{
-    margin-left: 75px;
+
 }
 .header {
     display: flex;
@@ -39,6 +44,10 @@
 .menus{
     padding: 28px;
     color: #484747;
+}
+
+.cr-tit{
+    text-align: center;
 }
 
 .first-content{
@@ -204,8 +213,8 @@
 }
 
 .girl-image1,.girl-image2,.girl-image3,.girl-image4,.girl-image5{
-    width: 50px;
-    height: 50px;
+    width: 35%;
+    height: 35%;
     border-radius: 100%;
     position: absolute;
     border: white;
@@ -315,7 +324,8 @@
 
 .crate-div{
     display: flex;
-
+    align-items: baseline;
+    justify-content: center;
 }
 
 .crate-first{
@@ -1151,7 +1161,7 @@
     display: flex;
 }
 .hear{
-    width: 60%;
+    width: 90%;
     text-align: center;
 }
 
@@ -1251,6 +1261,7 @@
 
 .help-left{
     width: 30%;
+    display: block;
 }
 
 .help-right{
@@ -1431,6 +1442,11 @@
     font-size: 14px;
 }
 
+.help-left{
+    display: block;
+    width: 100%;
+}
+
 
 @media only screen and (max-width: 1064px) {
     .menu{
@@ -1458,7 +1474,6 @@
         width: 260px;
         height: 100px;
         border:5px solid #8181d3;
-        margin-left: 180px;
         margin-top: -85px;
     }
 
@@ -1517,7 +1532,7 @@
 
     .help-right{
         width: 90%;
-        margin-left: 0;
+        margin-left: 25px;
         margin-top: 100px;
     }
 
@@ -1557,8 +1572,84 @@
 
 @media only screen and (max-width: 640px) {
     .menu{
-        padding: 30px;
-        margin-left: 25%;
+       display: none;
+    }
+
+    .menu-nav{
+        display: block;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+    }
+    #menu__toggle:checked + .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+        left: 0 !important;
+    }
+    .menu__btn {
+        position: fixed;
+        top: 75px;
+        left: 30px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+        transition-duration: .25s;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    .menu__box {
+        z-index: 1;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 40%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: #ECEFF1;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+        transition-duration: .25s;
+    }
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        transition-duration: .25s;
+    }
+    .menu__item:hover {
+        background-color: #CFD8DC;
     }
 
     .menus{
@@ -1566,7 +1657,7 @@
     }
 
     .products-header{
-        font-size: 30px;
+        font-size: 22px;
         text-align: center;
     }
 
@@ -1576,8 +1667,8 @@
         width: 160px;
         height: 40px;
         border: 3px solid #8181d3;
-        margin-left: 30%;
-        margin-top: 25px;
+        margin-top: 12px;
+        margin-left: 10px;
     }
 
     .sm-circlee{
@@ -1586,13 +1677,21 @@
         border: 3px solid  #8181d3;
     }
 
+
     .digital{
-        margin-top: 20px;
+        margin-top: 5px;
+    }
+
+    .dig{
+        display: flex;
+        margin-top: 5px;
         text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
     .cont-text{
-        font-size: 20px;
+        font-size: 12px;
     }
     .watch-our{
         font-size: 12px;
@@ -1625,17 +1724,34 @@
     .btn-content{
         padding: 10px;
         width: 23%;
-        font-size: 16px;
+        font-size: 9px;
         height: 44px;
     }
 
     .circle{
-        width: 225px;
-        height: 225px;
+        width: 145px;
+        height: 145px;
+    }
+
+    .sm-circle-pr{
+        margin-top: 200px;
+        margin-left: 55px;
+        width: 150px;
+        height: 120px;
+    }
+
+    .sm-circle{
+        margin-top: 290px;
+        margin-left: 175px;
     }
 
     .f-image{
-        margin-left: 250px;
+        margin-left: 180px;
+        width: 50px;
+    }
+
+    .image{
+        margin-left: 85px;
     }
 
     .companies-name{
@@ -1653,6 +1769,7 @@
     .crate-first-body{
         display: block;
         height: 2200px;
+        margin-left: 25px;
     }
 
     .east, .welcome, .money-box{
@@ -1745,15 +1862,19 @@
     }
 
     .money-card{
-        margin-left: 27%;
+        margin-left: 16%;
     }
 
     .amout-third{
-        margin-left: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .money-progress{
-        margin-left: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .right-first{
@@ -1766,12 +1887,13 @@
 
     .luca{
         margin-top: 65px;
-        width: 70%;
+        width: 110%;
     }
 
     .locator{
         margin-top: 65px;
-        width: 70%;
+        width: 100%;
+        height: 225px;
     }
 
     .right-second{
@@ -1796,6 +1918,147 @@
     .icon-div{
         margin-left: 30%;
     }
+
+    .employees{
+        font-size: 12px;
+    }
+
+    .eats-icon{
+        margin-left: 63%;
+    }
+
+    .ph-name{
+       font-size: 8px;
+    }
+
+    .dol-num{
+        margin-left: 10%;
+    }
+
+    .bell{
+        margin-left: 35%;
+    }
+
+    .home-icon{
+        font-size: 20px;
+    }
+
+    .seats-icon {
+        font-size: 20px;
+    }
+
+    .locator-second{
+        margin-left: 5px;
+        height: 190px;
+    }
+
+    .locator-third{
+        margin-left: 5px;
+    }
+    .hom-icon {
+        font-size: 6px;
+    }
+
+    .l-first-row {
+        font-size: 6px;
+    }
+
+    .never-lose{
+        height: 80px;
+    }
+
+    .dot-left {
+        width: 5%;
+    }
+
+    .l-third{
+        font-size: 8px;
+    }
+
+    .footer-first {
+        display: block;
+    }
+
+    .footer-logo{
+     position: unset;
+    }
+
+    .icon-div {
+        margin-left: unset;
+    }
+
+    .des-name{
+        font-size: 16px;
+    }
+
+    .footer{
+        height: 440px;
+    }
+
+    .footer-m{
+        margin-left: 10px;
+    }
+
+    .dot-img-right, .dot-right, .quotation-icon{
+        display: none;
+    }
+
+    .companies h3{
+     font-size: 16px;
+    }
+
+    .crate-title, .easy, .way ,.font-google,.font-creative,.shopify,.june    {
+        font-size: 12px;
+    }
+
+    .redasign{
+        font-size: 20px;
+    }
+
+    .header-text{
+        margin-top: 20px;
+    }
+
+    .hear-first {
+        font-size: 22px;
+    }
+
+    .content-text{
+        width: 100%;
+    }
+
+    .redesign {
+        font-size: 14px;
+    }
+
+    .hear-first {
+        font-size: 14px;
+    }
+
+    .hear-text {
+       font-size: 12px;
+    }
+
+    .l-first {
+        font-size: 14px;
+    }
+
+    .l-second {
+        font-size: 12px;
+    }
+
+    .left-he{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hear-img1{
+        margin-left: 8px;
+    }
+
+
+
 }
 
 
